@@ -216,31 +216,49 @@ gap:5px;
 .chat-list .read b{
   opacity: 0;
 }
-.right-container .message-container{
+
+
+/* right-container */
+
+.right-container .chat-details{
   display: flex;
-  padding:10px 30px;
-  margin-bottom:5px;
-}
-.right-container .own{
-  justify-content: flex-end;
+  flex-direction: column;
+  padding:10px 20px;
 }
 
-.right-container .message-container p{
-  width:30%;
+.right-container .own{
+  align-self: flex-end;
+}
+
+.right-container .message-container {
   padding: 10px 8px;
    position: relative;
    border-radius: 8px;
    font-size:0.9em;
-}
-.right-container .own p{
+   margin-bottom:5px;
+   display: flex;
+   flex-direction: column;
+   width:fit-content;
+   min-width: 20%;
+  }
+  .right-container .message-container .chat-text{
+    margin-bottom: 5px;
+  }
+  .right-container .message-container b{
+  font-size: 0.7em;
+  font-weight: 400;
+  align-self: flex-end;
+  }
+
+.right-container .own {
   background: #25d366;
   color: #fff;
 }
-.right-container .contact p{
+.right-container .contact {
   background:#fff;
 }
 
-.right-container .own p::after{
+.right-container .own::after{
   content:'';
   position: absolute;
   border-color:#25d366 transparent transparent transparent;
@@ -249,7 +267,7 @@ gap:5px;
   right:-10px;
   top:0;
 }
-.right-container .contact p::after{
+.right-container .contact::after{
   content:'';
   position: absolute;
   border-color:#fff transparent transparent transparent;
